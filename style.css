@@ -1,179 +1,66 @@
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
 
 
-:root{
-    --primary-color: #334456;
-    --primary-color-dark : #141420;
-    --secondary-color: #ff97ba;
-    --white: #ffffff;
-
-}
 *{
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+     
 }
 
-a{
-    text-decoration: none;
-}
 body{
-    font-family: "Montserrat", sans-serif;
-    font-optical-sizing: auto;
-    font-weight: weight;
-    font-style: normal;
-    background-color: var(--primary-color);
-    overflow-x: hidden;
-}
-
-.header_container{
-    position: relative;
-    max-width: 1200px;
-    margin: auto;
-    padding: 1rem;
-}
-
-nav{
-    padding: 1rem 0;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-}
-
-.nav_logo a{
-    font-size: 1.75rem;
-    font-weight: 700;
-    color: red;
-}
-
-.nav_links{
-    list-style: none;
-    display: flex;
-    align-items: center;
-    gap: 2rem;
-    color: #141420;
-}
-.link a{
-    position: relative;
-    font-size: 1.2rem;
-    padding-bottom: 5px;
-    font-weight: 600;
-    color: var(--primary-color-dark);
-}
-.link a::after{
-    position: absolute;
-    content: "";
-    width:0;
-    height: 2px;
-    bottom: 0;
-    left: 0;
-    background-color: var(--secondary-color);
-    transition: 0.3s;
-}
-.link a:hover::after{
     width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(45deg,#0a0a0a,#3a4452);
 }
 
-.header_content{
-    padding: 5rem 0;
+.calculator{
+    border: 1px solid #717377;
+    padding: 20px;
+    border-radius: 16px;
+    background: transparent;
+    box-shadow: 0px 3px 15px rgba(113, 115, 119, 0.5);
 }
 
-h1{
-    font-size: 8rem;
-    font-weight:700;
-    color: var(--white);
-  
+input{
+    width: 320px;
+    border: none;
+    padding: 24px;
+    margin: 10px;
+    background: transparent;
+    box-shadow: 0px 3px 15px rgbs(84,84,84,0.1);
+    font-size: 40px;
+    text-align: right;
+    cursor: pointer;
+    color: #ffffff;
 }
 
-h2{
-    margin-bottom: 2rem;
-    font-size: 3.5rem;
-    font-weight: 700;
-    color: var(--white);
+input::placeholder{
+    color: #ffffff;
 }
 
-.banner_1{
-    max-width: 400px;
-    margin-left: 5rem;
-    padding: 2rem;
-    font-size: 1.5rem;
-    font-weight: 700;
-    color: var(--primary-color-dark);
-    background-color: var(--white);
-}
-
-.btn{
-    display: inline-block;
-    padding: 1rem 3rem;
-    outline: none;
-    border:none;
-    font-weight:700;
-    font-size:2rem;
-    color: var(--white);
-    background-color: var(--secondary-color);
+button{
+    border: none;
+    width: 60px;
+    height: 60px;
+    margin: 10px;
+    border-radius: 50%;
+    background: transparent;
+    color: #ffffff;
+    font-size: 20px;
+    box-shadow: -8px -8px 15px rgba(255, 255, 255, 0.1);
     cursor: pointer;
 }
 
-.header_image{
-    position:absolute;
-    height: 100%;
-    width: 100%;
-    top: 0;
-    left: calc(50% - 5rem);
-    padding-top: 6rem;
-    background-color: var(--white);
-    z-index: -1;
-    overflow: hidden;
+.equalBtn{
+    background-color: #fb7c14;
 }
 
-.header_image img{
-    width: 100%;
-    display: flex;
-    max-width: 600px;
-}
-
-.header_socials{
-    right: 0;
-    top: 50%;
-    position: absolute;
-    display: flex;
-    flex-direction: column;
-    gap: 5px;
-}
-
-.header_socials span a{
-    font-size: 2rem;
-    color: var(--primary-color);
-    transition: 0.3s;
-}
-
-.types_container{
-    background-color: var(--primary-color-dark);
-}
-.types_grid{
-    max-width: 1200px;
-    margin: auto;
-    padding: 2rem 1rem;
-    display: grid;
-    grid-template-columns: repeat(3,1fr);
-    gap: 2rem;
-}
-
-.types_card{
-    padding: 1rem;
-    display: flex;
-    align-items: flex-start;
-    gap: 1rem;
-
-}
-
-.types_card h4{
-    font-size: 3rem;
-    color: var(--white);
-}
-
-.types_card p{
-    padding-bottom: 1rem;
-    color: var(--white);
-    border-bottom: 5px solid var(--primary-color);
+.operator{
+    color: #6dee0a;
 }
